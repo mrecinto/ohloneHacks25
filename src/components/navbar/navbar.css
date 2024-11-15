@@ -1,0 +1,25 @@
+nav {
+    height: 80px;
+    background: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .nav-items{
+    display: flex;
+    align-items: center;
+  }
+  .nav-items .item {
+    width: 60px;
+    height: 25px;
+    color:#F9Faf8;
+  }
+  .logo{
+      padding: 0 2rem;
+      font-weight: bold;
+      color:#F9Faf8;
+      font-size: larger;
+  }
+  
