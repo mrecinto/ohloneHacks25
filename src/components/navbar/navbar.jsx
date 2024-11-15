@@ -1,13 +1,20 @@
 
 import './navbar.css';
-//WAIT THIS IS SO COOL - MATTHEW
+import logo from './logo-one.png'
 function Navbar() {
     return (<nav>
-               <div class="logo">ohlonehacks</div>
+               <div class="logo">
+                    {/* ohlonehacks */}
+                    <a href="/#landing">
+                        <img src={logo} alt="Ohlone Hacks" style={{ width: '100px', height: '80px' }}/>
+                    </a>
+                </div>
                <div class="nav-items">
-                   <div class="item">dude</div>
-                   <div class="item">two</div>
-                   <div class="item">three</div>
+                   <div class="item">About</div>
+                   
+                   <div class="item">Tracks</div>
+                   <div class="item">FAQ</div>
+                   
                </div>
            </nav>);
 }
