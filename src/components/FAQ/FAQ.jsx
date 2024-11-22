@@ -21,25 +21,44 @@ function FAQ() {
             question: "What does it cost?",
             answer: "It’s free! Meals, swag, and sleeping arrangements are all provided."
         },
-        // Add more FAQ items here
+        {
+            question: "What if I don't know how to code?",
+            answer: "This Hackathon will be super beginner friendly!"
+        },
+        {
+            question: "What if I don't have a team or idea?",
+            answer: "No worries, you can work alone. As for ideas, you can choose any of our tracks to work on."
+        },
+        {
+            question: "What can I build?",
+            answer: "We will have four different tracks (Track 1), (Track 2), (Track 3), (Track 4). You are free to choose from any!"
+        },
+        {
+            question: "Are there prizes?",
+            answer: "Yes, there are many prizes. TBA at a later date."
+        },
+        {
+            question: "How do I apply?",
+            answer: "Fill out the registration form above!"
+        },
     ];
 
     return (
-        <div className="faq">
-            <div className="faq-title">
-                Frequently Asked Questions
-            </div>
-            <div className="faq-items">
-                {faqData.map((faq, index) => (
-                    <div
-                        key={index}
-                        className={`faq-item ${activeIndex === index ? "active" : ""}`}
-                        onClick={() => toggleAnswer(index)}
-                    >
-                        <div className="question">{faq.question}</div>
-                        <div className="answer">{faq.answer}</div>
-                    </div>
-                ))}
+        <div className="faq-container">
+            <div className="faq">
+                <div className="faq-title">Frequently Asked Questions (FAQS)</div>
+                <div className="faq-items">
+                    {faqData.map((faq, index) => (
+                        <div
+                            key={index}
+                            className={`faq-item ${activeIndex === index ? "active" : ""}`}
+                            onClick={() => toggleAnswer(index)}
+                        >
+                            <div className="question">{faq.question}</div>
+                            <div className="answer">{faq.answer}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

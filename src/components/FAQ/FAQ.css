@@ -1,14 +1,22 @@
+.faq-container {
+    margin-top: 1000px; /* Pushes the FAQ section lower down the page */
+    display: flex;
+    justify-content: center; /* Centers the entire FAQ section */
+}
+
 .faq {
     padding: 2rem;
     background: #1f2937;
     color: #f9faf8;
     font-family: Arial, sans-serif;
+    width: 100%; 
 }
 
 .faq-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centers the title */
 }
 
 .faq-items {
