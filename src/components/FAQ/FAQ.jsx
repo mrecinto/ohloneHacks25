@@ -41,6 +41,17 @@ function FAQ() {
             question: "How do I apply?",
             answer: "Fill out the registration form above!"
         },
+        {  question: "Where is OhloneHacks?",
+           answer: "OhloneHacks will take place at the Ohlone Fremont Campus. " 
+        },
+        {
+            question: "Will food be provided?",
+            answer: "Yes we will be providing meals and snacks through the event."
+        },
+        {
+            question:"Do I need to submit a project if I attend?",
+            answer: "You can take part in OhloneHacks without submitting a project, but must submit one in order to be eligible for prizes."
+        },
     ];
 
     return (
