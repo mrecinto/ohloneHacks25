@@ -6,6 +6,7 @@ import './App.css'
 // import Example from './example/example'
 import Navbar from './navbar/navbar'
 import FAQ from './FAQ/FAQ'
+import Sponsors from './Sponsors/Sponsors'
 
 
 // app logic
@@ -15,6 +16,7 @@ function App() {
     <>
       <Navbar/>
       <FAQ/>
+      <Sponsors/>
       {/* <Example/> */}
     </>
   )
