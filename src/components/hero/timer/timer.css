@@ -1,0 +1,49 @@
+
+.form_title h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Make font size responsive */
+  text-align: right; /* Align text to the right */
+  word-break: break-word; /* Prevent text overflow */
+  max-width: 100%; /* Ensure the title fits within the container */
+}
+
+.text-xl {
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive date size */
+  margin-bottom: 2rem;
+  text-align: right; /* Align date text to the right */
+}
+
+.timer-wrapper {
+  display: flex;
+  flex-direction: row; /* Default horizontal layout */
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.timer-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timer-value span {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-weight: bold;
+  color: white;
+}
+
+.timer-label {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0.8;
+}
+

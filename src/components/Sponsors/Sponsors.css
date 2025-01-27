@@ -1,0 +1,54 @@
+/* Sponsors Section */
+.sponsors-section {
+    padding: 100px 20px;
+    background-color: #1f2937; /* Matches dark theme */
+    color: #f9faf8;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sponsors-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f9faf8; /* Light text for the title */
+    margin-bottom: 10px;
+}
+
+.sponsors-subtitle {
+    font-size: 1.2rem;
+    color: #d1d5db; /* Slightly lighter for subtitle */
+    margin-bottom: 70px;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.sponsor-item {
+    background: #ffffff; /* White background for logos */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures logo fits inside */
+}
+
+.sponsor-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sponsor-logo {
+    max-width: 105%;
+    max-height: 105%;
+    object-fit: contain;
+    padding: 10px;
+}
