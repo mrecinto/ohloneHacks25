@@ -50,5 +50,5 @@
 }
 
 .faq-item.active .answer {
-    display: block; /* Show answer when active */
+    display: block; 
 }
