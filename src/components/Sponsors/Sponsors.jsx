@@ -1,12 +1,14 @@
 import React from "react";
 import ASOCLogo from '../../assets/Student-Legasdf.png';
 import marchUpLogo from '../../assets/marchupLogo.png'
+import codeforcauseLogo from '../../assets/codeforcause.png';
 import AOPSLogo from '../../assets/AoPS_Main_Logo_1.png';
 import "./Sponsors.css";
 
 function Sponsors() {
     const sponsors = [
         { name: "ASOC", logo: ASOCLogo, link: "https://ohlone.edu/asoc" },
+        { name: "CodeForCause", logo: codeforcauseLogo, link: "https://www.codeforcause.dev/" },
         { name: "MarchUp", logo: marchUpLogo, link: "https://marchup.net" },
         { name: "NordPass", logo: "https://images.saasworthy.com/nordpass_6669_logo_1719204895_2ykhq.png", link: "https://nordpass.com" },
         { name: "AoPS", logo: AOPSLogo, link: "https://artofproblemsolving.com/" },
