@@ -9,7 +9,7 @@ function Sponsors() {
         { name: "ASOC", logo: ASOCLogo, link: "https://ohlone.edu/asoc" },
         { name: "MarchUp", logo: marchUpLogo, link: "https://marchup.net" },
         { name: "NordPass", logo: "https://images.saasworthy.com/nordpass_6669_logo_1719204895_2ykhq.png", link: "https://nordpass.com" },
-        { name: "AoPS", logo: AOPSLogo, link: "https://1password.com" },
+        { name: "AoPS", logo: AOPSLogo, link: "https://artofproblemsolving.com/" },
         
         { name: "Saily", logo: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/esizssebffamghufonie", link: "https://saily.com" },
         { name: "NordVPN", logo: "https://play-lh.googleusercontent.com/G166NGtIsLp_UdpDjC1FF6dooIgd83fs2lstSI7mhW06q7gmiE1cw4BZ16OCX0WokPE", link: "https://nordvpn.com" },
