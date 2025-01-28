@@ -21,7 +21,11 @@ body, html {
   
 }
 
-
+@media (hover: hover) {
+  button:hover {
+      background-color: blue;
+  }
+}
 
 
 
