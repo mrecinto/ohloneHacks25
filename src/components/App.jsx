@@ -25,9 +25,21 @@ function App() {
   return (
     <>
     
-      <Navbar/>
-      <Hero/>
-      <Sponsors/>
+        <Navbar/>
+      <section id="home">
+        <Hero/>
+      </section>
+
+      <section id="sponsors">
+        <Sponsors/>
+      </section>
+
+
+
+
+
+
+      
       {/* <FAQ/> */}
       {/* <Footer/> */}
       
