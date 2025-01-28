@@ -28,13 +28,13 @@ function Hero() {
                         >
                             <p>Register</p>
                         </a>
-                        {/* <a
+                        <a
                             className="form_button form_mentor"
                             target="_blank"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSch8puXVeCb6MkMehUr1x7nvqOlClQV8n5NVczVIOoAbPnrog/viewform"
+                            href="https://forms.gle/rafHfMazTju8oM7z8"
                         >
                             <p>Mentor  </p>
-                        </a> */}
+                        </a>
                     </div>
                 </div>
             </div>
