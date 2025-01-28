@@ -11,7 +11,7 @@ import './App.css'
 
 import Navbar from './navbar/navbar'
 import Hero from './hero/hero'
-// import FAQ from './FAQ/FAQ'
+import FAQ from './FAQ/FAQ'
 import Sponsors from './Sponsors/Sponsors'
 
 import Bee from './hero/bee/bee'
@@ -25,16 +25,13 @@ function App() {
   return (
     <>
     
-      <Navbar />
-      <main>
-        <Hero />
-        
-        <Sponsors/>
-        
-        {/* <WhatWeAreAbout/> */}
-      </main>
+      <Navbar/>
+      <Hero/>
+      <Sponsors/>
+      {/* <FAQ/> */}
+      {/* <Footer/> */}
       
-      {/* <Footer /> */}
+      
       
 
       
