@@ -30,9 +30,9 @@ function App() {
         <Hero/>
       </section>
 
-      <section id="FAQ">
+      {/* <section id="FAQ">
         <FAQ/>
-      </section>
+      </section> */}
 
       <section id="sponsors">
         <Sponsors/>
@@ -44,7 +44,7 @@ function App() {
 
 
 
-      
+
       {/* <FAQ/> */}
       {/* <Footer/> */}
       
