@@ -30,9 +30,14 @@ function App() {
         <Hero/>
       </section>
 
+      <section id="FAQ">
+        <FAQ/>
+      </section>
+
       <section id="sponsors">
         <Sponsors/>
       </section>
+
 
 
 
