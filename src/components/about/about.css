@@ -1,65 +1,65 @@
 body {
-  font-family: 'Metropolis', sans-serif;
-  letter-spacing: 1px;
-  background-color: #f4f4f9; /* Light background to complement the design */
-}
-
-.about-container {
-  padding: 120px 20px;
-  min-height: 50vh;
-  text-align: center;
-  background: linear-gradient(to top, #E8C766, #5b89bd);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* This creates the parallax effect */
-  color: #fff;
-  border-bottom: 2px solid #fce84b;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.about-header {
-  font-size: 70px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #fff; /* Ensures header stands out against gradient background */
-  margin-bottom: 30px;
-}
-
-.about-content {
-  font-size: 40px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #fff;
-  padding-top: 20px;
-}
-
-.highlight {
-  color: #fce84b; /* Yellow for highlighting */
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
+    font-family: 'Metropolis', sans-serif;
+    letter-spacing: 1px;
+    background-color: #f4f4f9; /* Light background to complement the design */
+  }
+  
+  .about-container {
+    padding: 120px 20px;
+    min-height: 50vh;
+    text-align: center;
+    background: linear-gradient(to top, #E8C766, #5b89bd);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect */
+    color: #fff;
+    border-bottom: 2px solid #fce84b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
   .about-header {
-      font-size: 50px;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff; /* Ensures header stands out against gradient background */
+    margin-bottom: 30px;
   }
-
+  
   .about-content {
-      font-size: 22px;
+    font-size: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 20px;
   }
-}
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+  
+  .highlight {
+    color: #fce84b; /* Yellow for highlighting */
+    font-weight: bold;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  
+  @media (max-width: 768px) {
+    .about-header {
+        font-size: 50px;
+    }
+  
+    .about-content {
+        font-size: 22px;
+    }
   }
-}
-
-.about-header, .about-content {
-  animation: slideIn 1s ease-out forwards;
-}
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .about-header, .about-content {
+    animation: slideIn 1s ease-out forwards;
+  }

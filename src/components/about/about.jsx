@@ -17,7 +17,7 @@ const AboutMe = () => {
       <p className="about-content">
         Join our hackathon <br />for collaboration, innovation, creativity, and skill-building!
       </p>
-      <div class="clouds"></div>
+      <div className="clouds"></div>
 
     </div>
     

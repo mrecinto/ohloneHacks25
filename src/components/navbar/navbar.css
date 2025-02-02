@@ -1,25 +1,179 @@
-nav {
-    height: 80px;
-    background: #1f2937;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-  
-  .nav-items{
-    display: flex;
-    align-items: center;
-  }
-  .nav-items .item {
-    width: 60px;
-    height: 25px;
-    color:#F9Faf8;
-  }
-  .logo{
-      padding: 0 2rem;
-      font-weight: bold;
-      color:#F9Faf8;
-      font-size: larger;
-  }
-  
+    /* Navbar Styling */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 40;
+        transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+        height: 100px; /* Default height */
+        opacity: 1;
+        transform: translateY(0);
+        background: transparent; /* Transparent at the top */
+        backdrop-filter: none; /* No glassy effect at the top */
+        box-shadow: none; /* No shadow at the top */
+    }
+    
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.219); /* Glassy effect when scrolled */
+        backdrop-filter: blur(10px); /* Blur effect when scrolled */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
+    }
+
+    .navbar.hidden {
+        opacity: 0;
+        transform: translateY(-100%); /* Move completely out of view */
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between; /* Spread logo and nav links */
+        align-items: center; /* Center items vertically */
+        padding: 1rem 2rem;
+        position: relative;
+        transition: padding 0.3s ease;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        transition: font-size 0.3s ease;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        z-index: 60;
+        transition: top 0.3s ease;
+    }
+
+    .hamburger .line {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.is-active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.is-active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Desktop Nav Links */
+    .nav-links.desktop {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center; /* Ensure nav items align vertically */
+    }
+
+    .nav-links.desktop a {
+        text-decoration: none;
+        color: #0e192f;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        padding: 0.5rem 0; /* Add padding to move nav items slightly down */
+        line-height: 1.5; /* Improve vertical alignment */
+    }
+
+    .nav-links.desktop a:hover {
+        color: #007acc;
+    }
+
+    /* Fullscreen Mobile Menu */
+    .fullscreen-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(40, 70, 130); 
+        z-index: 50;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start; /* Align items near the top */
+        align-items: center;
+        animation: fadeIn 0.3s ease forwards;
+        padding-top: 3rem; /* Add padding to push items slightly down */
+    }
+
+    /* Menu Items */
+    .menu-items {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        gap: 2rem; /* Space between items */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 1.5rem; /* Add margin below the padding */
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        padding: 0.5rem 0; /* Add padding around each item */
+    }
+
+    .menu-item a:hover {
+        color: #ffdd48; /* Highlight on hover */
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links.desktop {
+            display: none;
+        }
+    }
+
+    /* Keyframes for fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+}
+
+/* Apply fade-out animation */
+.fullscreen-menu.is-exiting {
+    animation: fadeOut 0.3s ease forwards; /* Smooth exit animation */
+    pointer-events: none; /* Disable interaction during exit */
+}

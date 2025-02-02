@@ -1,0 +1,17 @@
+footer {
+  border: solid 1px red;
+}
+.footer_container {
+    position: relative;
+    min-height: 188px;
+    width: 100%;
+    display: flex;
+    border: solid 1px red; 
+}
+
+.footer_item {
+    border: solid 1px red;
+}
+.footer_ohloneHacksTitle{
+  display: flex;
+}

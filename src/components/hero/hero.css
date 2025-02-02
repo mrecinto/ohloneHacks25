@@ -1,0 +1,223 @@
+.form_item {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.form_item.form_title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center; 
+    margin-bottom: 1rem;
+}
+
+.ohlone {
+    color: #08090d; 
+    font-weight: bold;
+}
+
+.form_date {
+    font-weight: bold;
+    text-align: center; 
+}
+
+.hacks {
+    color: #526ab7; 
+    font-weight: bold;
+    text-align: center; 
+}
+
+.hero.hero_container {
+    min-height: 100vh; 
+    background: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    padding: 8rem 0 0rem;
+}
+
+.clouds_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.clouds_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cloudlayer1,
+.cloudlayer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: auto;
+    animation: floatClouds 30s ease-in-out infinite;
+    filter: blur(10px);
+}
+
+.cloudlayer2 {
+    z-index: 2;
+    animation-duration: 40s;
+    filter: blur(1.6px);
+}
+
+@keyframes floatClouds {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero.form_container {
+    z-index: 13;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .form_buttons {
+        flex-direction: column;
+    }
+}
+
+.form_buttons a {
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+    text-decoration: none;
+    padding: 10px 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.form_register,
+.form_mentor {
+    width: 100%;
+    max-width: 250px; 
+}
+
+.form_register {
+    color: rgb(255, 255, 255);
+    background: #526ab7;
+    box-shadow: 0px 8px 20px rgba(82, 106, 183, 1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.form_mentor {
+    color: rgb(255, 255, 255);
+    background: rgb(42, 51, 81);
+    box-shadow: 0px 8px 20px rgb(96, 113, 169);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.form_register:hover,
+.form_mentor:hover {
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.ohloneBuilding_container {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    z-index: 2;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ohloneBuilding {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(min-width: 1024px) {
+    .hero.form_container {
+        position: absolute !important;
+        left: 70% !important;
+        top: 20% !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1681px) {
+    .form_item.form_title {
+        font-size: 1rem;
+    }
+    
+    .ohlone {
+        font-size: 2.5rem;
+    }
+
+    .hacks {
+        font-size: 2.5rem;
+    }
+
+    .form_item.form_date {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero.hero_container {
+        padding: 7rem 0 0rem;
+        min-height: 100vh;
+    }
+
+    .ohloneBuilding_container {
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .ohloneBuilding {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .clouds_wrapper {
+        height: 100vh;
+    }
+
+    .hero.form_container {
+        width: 80%;
+    }
+
+    .form_buttons a {
+        width: auto;
+    }
+}
