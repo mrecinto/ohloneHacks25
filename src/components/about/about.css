@@ -1,16 +1,23 @@
 body {
-    background-color: #171031;
+    background: linear-gradient(to bottom, #171031, #2d1f5d);
     color: white;
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
 .about-us-container {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #171031, #2d1f5d,#171031);
+    color: white;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+    box-sizing: border-box;
 }
+
 
 .main-section {
     display: flex;
