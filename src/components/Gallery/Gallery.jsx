@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './gallery.css';
 
 const Gallery = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Image+1",
+    "https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Image+2",
+    "https://via.placeholder.com/800x400/5733FF/FFFFFF?text=Image+3",
+    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+4",
+    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+5",
+    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+6",
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
   return (
-    <div className="gallery-container">
-      <h2 className="gallery-title">Gallery</h2>
-      <div className="gallery-slides">
-        {/* Example placeholder images */}
-        <div className="gallery-slide">
-          <img src="https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Image+1" alt="Image 1" />
+    <section id="gallery">
+      <div className="gallery-container">
+        <h2 className="gallery-title">Gallery</h2>
+        <div className="gallery-slides">
+          <div className="gallery-slide">
+            <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+          </div>
         </div>
-        <div className="gallery-slide">
-          <img src="https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Image+2" alt="Image 2" />
-        </div>
-        <div className="gallery-slide">
-          <img src="https://via.placeholder.com/800x400/5733FF/FFFFFF?text=Image+3" alt="Image 3" />
-        </div>
-        <div className="gallery-slide">
-          <img src="https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+4" alt="Image 4" />
+
+        {/* Slide Navigation Buttons */}
+        <div className="nav-buttons">
+          <button className="prev" onClick={prevSlide}>Prev</button>
+          <button className="next" onClick={nextSlide}>Next</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,37 +1,46 @@
-/* gallery.css */
+#gallery {
+  text-align: center;
+}
 
-/* Container for the slideshow */
 .gallery-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden; 
-    background-color: #f3f3f3; 
-  }
-  
-  .gallery-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #526ab7;
-    margin-bottom: 20px;
-  }
-  
-  .gallery-slides {
-    display: flex; 
-    transition: transform 0.5s ease; 
-  }
-  
-  .gallery-slide {
-    min-width: 100%; 
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .gallery-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+  max-width: 800px;
+  margin: auto;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gallery-slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #FF5733;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #e94e2e;
+}
+
+button:focus {
+  outline: none;
+}
