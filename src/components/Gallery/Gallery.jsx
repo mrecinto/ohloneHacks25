@@ -1,43 +1,38 @@
-import React, { useState } from 'react';
-import './gallery.css';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-const Gallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    "https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Image+1",
-    "https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Image+2",
-    "https://via.placeholder.com/800x400/5733FF/FFFFFF?text=Image+3",
-    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+4",
-    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+5",
-    "https://via.placeholder.com/800x400/FF33A1/FFFFFF?text=Image+6",
-  ];
+const images = [
+  "/image1.jpg",
+  "/image2.jpg",
+  "/image3.jpg",
+  "/image4.jpg",
+];
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+export default function Slideshow() {
+  const [index, setIndex] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section id="gallery">
-      <div className="gallery-container">
-        <h2 className="gallery-title">Gallery</h2>
-        <div className="gallery-slides">
-          <div className="gallery-slide">
-            <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-          </div>
-        </div>
-
-        {/* Slide Navigation Buttons */}
-        <div className="nav-buttons">
-          <button className="prev" onClick={prevSlide}>Prev</button>
-          <button className="next" onClick={nextSlide}>Next</button>
-        </div>
+    <div className="slideshow-container">
+      <div className="slideshow">
+        {images.map((src, i) => (
+          <motion.img
+            key={i}
+            src={src}
+            alt={`Slide ${i + 1}`}
+            className="slide"
+            animate={{ x: `${(i - index) * 100}%` }}
+            transition={{ type: "tween", duration: 0.8 }}
+          />
+        ))}
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Gallery;
+}
