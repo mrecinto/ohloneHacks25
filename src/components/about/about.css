@@ -43,7 +43,7 @@ body {
 }
 
 .about-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     opacity: 0.8;
 }
@@ -138,3 +138,77 @@ body {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+
+    .right-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: static;
+    }
+
+    .info-section {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .left-info {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+        text-align: center;
+    }
+    .word {
+        font-size: 1.2rem;
+    }
+
+    .about-us-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .image-building {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

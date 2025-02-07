@@ -22,7 +22,10 @@ const AboutUs = () => {
         <span className="letter">s</span>
         </h2>
           <p>
-          <b class="highlight">OhloneHacks</b> is a vibrant community where creativity meets technology. We provide a welcoming space for individuals of all skill levels to <b class="highlight">collaborate,</b> <b class="highlight">learn,</b> and <b class="highlight">innovate</b> through hackathons and tech projects. Our goal is to empower participants to explore their potential, while fostering <b class="highlight">teamwork</b> and <b class="highlight">problem-solving</b>. Whether you're new to tech or a seasoned pro, OhloneHacks is where you can grow and make an impact.
+          <b class="highlight">OhloneHacks</b> is more than just a tech community - it's the first community college 
+          hackathon in the Bay Area, bringing together over 100 hackers from diverse backgrounds. 
+          We believe in <b class="highlight">empowering </b> students to <b class="highlight"> explore </b> technology, <b class="highlight"> collaborate </b>
+          on impactful projects, and <b class="highlight"> build </b> real solutions while <b class="highlight">networking</b> with industry professionals.
           </p>
         </div>
       </div>
@@ -30,9 +33,9 @@ const AboutUs = () => {
       <div className="info-section">
         <div className="left-info">
           <p>
-            <span className="word">Beginner-friendly</span>
             <span className="word">Collaborative</span>
-            <span className="word">Innovative solutions</span>
+            <span className="word">Innovative Solutions</span>
+            <span className="word">Network</span>
           </p>
         </div>
 
