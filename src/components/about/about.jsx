@@ -12,14 +12,14 @@ const AboutUs = () => {
         </div>
         <div className="about-text">
         <h2>
-        <span className="letter">A</span>
+        {/* <span className="letter">A</span>
         <span className="letter">b</span>
         <span className="letter">o</span>
         <span className="letter">u</span>
         <span className="letter">t</span>
         <span className="letter"> </span>
         <span className="letter">U</span>
-        <span className="letter">s</span>
+        <span className="letter">s</span> */}
         </h2>
           <p>
           <b class="highlight">OhloneHacks</b> is more than just a tech community - it's the first community college 

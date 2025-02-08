@@ -1,7 +1,7 @@
 .about-us-container {
     overflow-x: hidden;
     width: 100%;
-    margin: 0 auto; /* Center the section */
+    margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
     background: linear-gradient(to bottom, #171031, #2d1f5d, #171031);
@@ -9,25 +9,26 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center; /* Center everything */
     align-items: center;
     box-sizing: border-box;
 }
 
 .main-section {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10px; /* Reduce spacing */
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
 .about-text {
     max-width: 600px;
     text-align: left;
     animation: fadeIn 2s ease-out forwards;
+    padding: 10px;
 }
 
 .about-text h2 {
@@ -38,24 +39,30 @@
 }
 
 .about-text p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    opacity: 0.8;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-top: 5px;
 }
 
 .highlight {
     color: #526ab7;
 }
 
+/* Align the bottom section side by side */
 .info-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: row; /* Change from column to row */
     align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 50px; /* Add space between text and image */
     width: 100%;
-    margin-top: 0px;
+    margin-top: 20px; /* Adjust spacing */
+    text-align: center;
+    max-width: 1200px;
 }
 
+/* Keep hover animation for text */
 .left-info {
     text-align: right;
     font-size: 1.5rem;
@@ -63,10 +70,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 0.3s ease-out;
-    margin-left: 100px;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 .left-info p {
@@ -75,6 +81,7 @@
     gap: 15px;
 }
 
+/* Hover effect remains */
 .word {
     font-size: 2rem;
     font-weight: bold;
@@ -91,82 +98,34 @@
     color: #526ab7;
 }
 
-.word:nth-child(1) {
-    transition-delay: 0s;
-}
-.word:nth-child(2) {
-    transition-delay: 0.2s;
-}
-.word:nth-child(3) {
-    transition-delay: 0.4s;
-}
+/* Staggered hover animation */
+.word:nth-child(1) { transition-delay: 0s; }
+.word:nth-child(2) { transition-delay: 0.2s; }
+.word:nth-child(3) { transition-delay: 0.4s; }
 
+/* Center images and keep them responsive */
 .image-building, .right-image {
     position: relative;
-    width: 600px; /* Set a consistent width */
-    max-width: 100%; /* Ensures responsiveness */
-    height: auto; /* Allow image to scale naturally */
+    width: 500px;
+    max-width: 90%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible; /* Ensures no part is hidden */
 }
 
 .image-building img, .right-image img {
     width: 100%;
-    height: auto; /* Remove fixed height to prevent cropping */
-    object-fit: contain; /* Ensures the entire image is visible */
+    height: auto;
+    object-fit: contain;
     position: relative;
     z-index: 2;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-
-    .right-image {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    .right-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        position: static;
-    }
-
-    .info-section {
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .left-info {
-        width: 100%;
-        padding: 1rem;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin: 0;
-        text-align: center;
-    }
-
-    .word {
-        font-size: 1.2rem;
-    }
-
     .about-us-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 2rem 1rem;
+        padding: 1rem;
     }
 
     .main-section {
@@ -184,19 +143,30 @@
     }
 
     .about-text p {
-        font-size: 1rem;
-        line-height: 1.4;
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    /* Stack items vertically on small screens */
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .left-info {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .word {
+        font-size: 1.2rem;
     }
 
     .image-building, .right-image {
-        width: 100%;
-        max-width: 350px; /* Adjust image size for mobile */
-        height: auto; /* Ensures image remains visible */
-    }
-
-    .image-building img, .right-image img {
-        width: 100%;
-        height: auto;
-        object-fit: contain; /* Prevents cropping on smaller screens */
+        width: 90%;
+        max-width: 350px;
     }
 }

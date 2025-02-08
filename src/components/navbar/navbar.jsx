@@ -101,7 +101,7 @@ const Navbar = () => {
                     <a href="#gallery">Gallery</a>
                     <a href="#faq">FAQ</a>
                     <a href="#sponsors">Sponsors</a>
-                    <a href="#contact">Contact</a>
+                    {/* <a href="#contact">Contact</a> */}
                 </div>
                 {isMenuOpen && (
                     <div className="fullscreen-menu">
