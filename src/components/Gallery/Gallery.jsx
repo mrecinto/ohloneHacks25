@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "/image_4085.jpg"
+  "/images.jpg"
   // Add more iframe URLs here
 ];
 
