@@ -32,7 +32,7 @@ function App() {
       </section>
      
       
-      <Gallery/>
+      {/* <Gallery/> */}
 
       {/* <section id="FAQ">
         <FAQ/>
