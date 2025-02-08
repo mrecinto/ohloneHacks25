@@ -31,11 +31,11 @@ function App() {
         <Hero/>
       </section>
 
-      <section id="about-us">
+      <section id="about">
         <AboutUs/>
       </section>
 
-      <section id="FAQ">
+      <section id="faq">
         <FAQ/>
       </section>
 

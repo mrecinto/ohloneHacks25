@@ -1,14 +1,10 @@
-body {
-    background: linear-gradient(to bottom, #171031, #2d1f5d);
-    color: white;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
 .about-us-container {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto; /* Center the section */
     padding: 2rem 1rem;
     text-align: center;
-    background: linear-gradient(to bottom, #171031, #2d1f5d,#171031);
+    background: linear-gradient(to bottom, #171031, #2d1f5d, #171031);
     color: white;
     min-height: 100vh;
     display: flex;
@@ -18,16 +14,15 @@ body {
     box-sizing: border-box;
 }
 
-
 .main-section {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 20px;
+    gap: 10px; /* Reduce spacing */
     margin-bottom: 40px;
 }
-
 
 .about-text {
     max-width: 600px;
@@ -60,8 +55,9 @@ body {
     width: 100%;
     margin-top: 0px;
 }
+
 .left-info {
-    text-align: left;
+    text-align: right;
     font-size: 1.5rem;
     line-height: 1.8;
     display: flex;
@@ -104,46 +100,32 @@ body {
 .word:nth-child(3) {
     transition-delay: 0.4s;
 }
-.image-building {
+
+.image-building, .right-image {
     position: relative;
-    width: 550px;
-    height: auto;
+    width: 600px; /* Set a consistent width */
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Allow image to scale naturally */
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: visible; /* Ensures no part is hidden */
 }
 
-.image-building img {
+.image-building img, .right-image img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: auto; /* Remove fixed height to prevent cropping */
+    object-fit: contain; /* Ensures the entire image is visible */
     position: relative;
     z-index: 2;
 }
 
-.right-image {
-    position: relative;
-    width: 700px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.right-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    position: relative;
-    top: -50px; 
-    left: -40px;
-    z-index: 1;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
 
     .right-image {
         width: 100%;
         height: auto;
-        object-fit: contain;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -174,6 +156,7 @@ body {
         margin: 0;
         text-align: center;
     }
+
     .word {
         font-size: 1.2rem;
     }
@@ -205,10 +188,15 @@ body {
         line-height: 1.4;
     }
 
-    .image-building {
-        height: auto;
-        display: flex;
-        justify-content: center;
+    .image-building, .right-image {
         width: 100%;
+        max-width: 350px; /* Adjust image size for mobile */
+        height: auto; /* Ensures image remains visible */
+    }
+
+    .image-building img, .right-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Prevents cropping on smaller screens */
     }
 }

@@ -1,5 +1,5 @@
 .faq-section {
-    background: linear-gradient(to bottom, #08090d 40%, #1b1c38 100%);
+    background: linear-gradient(to bottom, #171031 0%, #100b20 30%, #08090d 80%);
     color: white;
     padding: 80px 5vw;
     text-align: center;
@@ -7,17 +7,6 @@
     position: relative;
 }
 
-/* Angled White Separator - Matches Previous Section */
-.faq-section::before {
-    content: "";
-    position: absolute;
-    top: -60px; /* Adjust this value if necessary */
-    left: 0;
-    width: 100%;
-    height: 100px; /* Height of the white separator */
-    background: white;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
-}
 
 .faq-title {
     font-size: 2.5rem;
@@ -83,3 +72,4 @@
         height: 80px;
     }
 }
+

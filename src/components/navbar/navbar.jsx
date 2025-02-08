@@ -139,11 +139,11 @@ const Navbar = () => {
                                     Sponsors
                                 </a>
                             </li>
-                            <li className="menu-item">
+                            {/* <li className="menu-item">
                                 <a href="#contact" onClick={closeMenu}>
                                     Contact
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 )}
