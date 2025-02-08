@@ -19,6 +19,7 @@ import Bee from './hero/bee/bee'
 // import AboutMe from './about/about'
 // import WhatWeAreAbout from './about/whatweareabout'
 import Footer from './footer/footer'
+import Gallery from './Gallery/Gallery';
 // app logic
 function App() {
 
@@ -29,10 +30,13 @@ function App() {
       <section id="home">
         <Hero/>
       </section>
+     
+      
+      <Gallery/>
 
-      <section id="FAQ">
+      {/* <section id="FAQ">
         <FAQ/>
-      </section>
+      </section> */}
 
       <section id="sponsors">
         <Sponsors/>
@@ -44,7 +48,7 @@ function App() {
 
 
 
-      
+
       {/* <FAQ/> */}
       {/* <Footer/> */}
       

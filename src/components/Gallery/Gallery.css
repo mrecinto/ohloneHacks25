@@ -1,0 +1,33 @@
+/* Gallery.css */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.main-image img {
+  width: 800px;
+  height: auto;
+  border-radius: 25px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 30px;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+  border-color: #007bff;
+}
