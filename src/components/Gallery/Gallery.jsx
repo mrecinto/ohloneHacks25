@@ -2,19 +2,10 @@ import { useState, useEffect } from "react";
 
 const images = [
   "",
-  "/image2.jpg",
-  "/image3.jpg",
-  "/image4.jpg",
-  "/image1.jpg",
-  "/image2.jpg",
-  "/image3.jpg",
-  "/image4.jpg",
-  "/image1.jpg",
-  "/image2.jpg",
-  "/image3.jpg",
-  "/image4.jpg",
-  "/image1.jpg",
-  "/image2.jpg",
+  "https://drive.google.com/file/d/16rDMIC-vnXkUBWFaLjfhvce9wT2sGyQq/preview",
+  "https://drive.google.com/file/d/1kxzF7nX3RTmlRAkW1XGz-_5wX29V8qV0/preview",
+  "https://drive.google.com/file/d/1D9U66JY-pwv6F_vzXz5T4wvx34w3qGAw/preview",
+  // Add more iframe URLs here
 ];
 
 export default function Slideshow() {
@@ -42,12 +33,24 @@ export default function Slideshow() {
             }}
           >
             {images.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Slide ${i + 1}`}
-                style={{ width: "700px", height: "500px", flexShrink: 0 }}
-              />
+              <div key={i} style={{ width: "700px", flexShrink: 0 }}>
+                {src.includes('drive.google.com') ? (
+                  <iframe
+                    src={src}
+                    width="700"
+                    height="500"
+                    allow="autoplay"
+                    title={`Slide ${i + 1}`}
+                    style={{ border: "none" }}
+                  />
+                ) : (
+                  <img
+                    src={src}
+                    alt={`Slide ${i + 1}`}
+                    style={{ width: "700px", height: "500px" }}
+                  />
+                )}
+              </div>
             ))}
           </div>
         </div>
