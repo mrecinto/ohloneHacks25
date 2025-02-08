@@ -3,27 +3,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
 }
 
 .main-image img {
-  width: 500px;
+  width: 800px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 .thumbnail-container {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .thumbnail {
-  width: 100px;
-  height: 75px;
+  width: 200px;
+  height: 100px;
   object-fit: cover;
   cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  border: 4px solid transparent;
+  border-radius: 8px;
   transition: border-color 0.3s;
 }
 

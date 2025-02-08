@@ -5,6 +5,16 @@ const images = [
   "/image2.jpg",
   "/image3.jpg",
   "/image4.jpg",
+  "/image1.jpg",
+  "/image2.jpg",
+  "/image3.jpg",
+  "/image4.jpg",
+  "/image1.jpg",
+  "/image2.jpg",
+  "/image3.jpg",
+  "/image4.jpg",
+  "/image1.jpg",
+  "/image2.jpg",
 ];
 
 export default function Slideshow() {
