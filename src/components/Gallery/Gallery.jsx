@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "https://drive.google.com/uc?export=view&id=16rDMIC-vnXkUBWFaLjfhvce9wT2sGyQq",
+  "",
   "/image2.jpg",
   "/image3.jpg",
   "/image4.jpg",
@@ -29,8 +29,8 @@ export default function Slideshow() {
   }, []);
 
   return (
-    <section style={{ textAlign: "center", padding: "20px" }}>
-      <h2 style={{ fontSize: "2rem", marginBottom: "20px" }}>Gallery</h2>
+    <section style={{ textAlign: "center", padding: "20px", backgroundColor: "#171031" }}>
+      <h2 style={{ fontSize: "2rem", marginBottom: "20px", color: "#fff" }}>Gallery</h2>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <div className="slideshow-container" style={{ overflow: "hidden", width: "700px", position: "relative" }}>
           <div
