@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "https://drive.google.com/file/d/16rDMIC-vnXkUBWFaLjfhvce9wT2sGyQq/preview",
-  "https://drive.google.com/file/d/1QzexeLPBMVVOQuBGntmnjIyVRH3bJGgs/preview" 
+  "https://drive.google.com/uc?id=1QzexeLPBMVVOQuBGntmnjIyVRH3bJGgs",
+  "https://drive.google.com/uc?id=1QzexeLPBMVVOQuBGntmnjIyVRH3bJGgs" 
   // Add more iframe URLs here
 ];
 
