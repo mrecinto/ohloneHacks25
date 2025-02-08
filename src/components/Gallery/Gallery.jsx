@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "/image1.jpg",
+  "https://drive.google.com/uc?export=view&id=16rDMIC-vnXkUBWFaLjfhvce9wT2sGyQq",
   "/image2.jpg",
   "/image3.jpg",
   "/image4.jpg",
