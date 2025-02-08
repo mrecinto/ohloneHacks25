@@ -12,6 +12,7 @@ import './App.css'
 import Navbar from './navbar/navbar'
 import Hero from './hero/hero'
 import FAQ from './FAQ/FAQ'
+import Gallery from './Gallery/Gallery'
 import Sponsors from './Sponsors/Sponsors'
 
 // import Bee from './hero/bee/bee'
@@ -33,6 +34,9 @@ function App() {
 
       <section id="about">
         <AboutUs/>
+      </section>
+      <section id="gallery">
+        <Gallery/>
       </section>
 
       <section id="faq">
