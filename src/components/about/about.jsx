@@ -13,14 +13,14 @@ const AboutUs = () => {
         <div className="about-text">
           <h2>
             {/* If you want to animate the letters individually, uncomment below */}
-            {/* <span className="letter">A</span>
+            <span className="letter">A</span>
             <span className="letter">b</span>
             <span className="letter">o</span>
             <span className="letter">u</span>
             <span className="letter">t</span>
             <span className="letter"> </span>
             <span className="letter">U</span>
-            <span className="letter">s</span> */}
+            <span className="letter">s</span>
           </h2>
           <p>
             <b className="highlight">OhloneHacks</b> is more than just a tech community - it's the first
