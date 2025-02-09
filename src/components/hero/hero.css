@@ -9,7 +9,6 @@
 .form_item.form_title {
     font-size: 2rem;
     font-weight: bold;
-
     text-align: center; 
 }
 
@@ -96,28 +95,34 @@
     align-items: center;
 }
 
-.form_buttons {
-    margin-top: 15px;
+/* Ensure the bee is positioned to the left of the buttons */
+.form_buttons_wrapper {
     display: flex;
+    align-items: center; /* Align bee and buttons on the same line */
+    justify-content: center;
+    gap: 15px; /* Space between bee and buttons */
+    margin-top: 15px;
     flex-wrap: wrap;
+}
+
+/* Stack buttons vertically */
+.form_buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons */
     gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
-@media (max-width: 768px) {
-    .form_buttons {
-        flex-direction: column;
-    }
-}
-
+/* Ensure buttons are correctly sized */
 .form_buttons a {
-    flex: 1;
-    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
     min-width: 200px;
     text-decoration: none;
-    padding: 10px 100px;
+    padding: 12px 100px;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -125,32 +130,76 @@
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.form_register,
-.form_mentor {
-    width: 100%;
-    max-width: 250px; 
-}
-
+/* Register button */
 .form_register {
     color: rgb(255, 255, 255);
     background: #526ab7;
     box-shadow: 0px 8px 20px rgba(82, 106, 183, 1);
-    transition: box-shadow 0.3s, transform 0.3s;
 }
 
+/* Mentor button */
 .form_mentor {
     color: rgb(255, 255, 255);
     background: rgb(42, 51, 81);
     box-shadow: 0px 8px 20px rgb(96, 113, 169);
-    transition: box-shadow 0.3s, transform 0.3s;
 }
 
+/* Button hover effects */
 .form_register:hover,
 .form_mentor:hover {
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.5);
     transform: translateY(-3px);
 }
 
+/* Bee */
+.bee {
+    width: 80px;  
+    height: auto;
+    animation: bee_float 3s ease-in-out infinite;
+    margin-right: 20px; /* Space from buttons */
+}
+
+/* Floating animation */
+@keyframes bee_float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* FIX: Ensure the bee remains to the left on medium-sized screens (600px - 1280px) */
+@media (max-width: 1280px) and (min-width: 600px) {
+    .form_buttons_wrapper {
+        flex-direction: row; /* Keep bee next to buttons */
+        justify-content: center;
+    }
+
+    .bee {
+        order: 0; /* Ensure bee stays on the left */
+        margin-right: 20px;
+        margin-top: 0;
+    }
+}
+
+/* Move bee below buttons on smaller screens */
+@media (max-width: 600px) {
+    .form_buttons_wrapper {
+        flex-direction: column; /* Stack everything */
+    }
+
+    .bee {
+        order: 2; /* Move bee below buttons */
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+
+/* Ensure the Ohlone Building remains properly positioned */
 .ohloneBuilding_container {
     position: relative;
     width: 100%;
@@ -166,32 +215,33 @@
     object-fit: cover;
 }
 
-@media(min-width: 1024px) {
+/* Large screens positioning */
+@media (min-width: 1024px) {
     .hero.form_container {
         position: absolute !important;
         left: 70% !important;
         top: 20% !important;
     }
 }
+
+/* Prevent Ohlone building from clipping on large screens */
 @media (min-width: 1024px) and (max-width: 1681px) {
     .ohloneBuilding_container {
-        height: 110vh;  /* Increase height to prevent clipping */
-        margin-top: -5vh; /* Adjust to move up without clipping */
-        overflow: visible; /* Ensure it doesn't get cut */
+        height: 110vh;  
+        margin-top: -5vh; 
+        overflow: visible; 
     }
 }
 
 @media (min-width:1681px){
     .ohloneBuilding_container {
-        height: 109vh;  /* Increase height to prevent clipping */
-        margin-top: -10vh; /* Adjust to move up without clipping */
-        overflow: visible; /* Ensure it doesn't get cut */
+        height: 109vh;  
+        margin-top: -10vh; 
+        overflow: visible; 
     }
 }
 
-
-
-
+/* Adjust text sizes for medium screens */
 @media (min-width: 1024px) and (max-width: 1681px) {
     .form_item.form_title {
         font-size: 1rem;
@@ -210,6 +260,7 @@
     }
 }
 
+/* Adjust for small screens */
 @media (max-width: 768px) {
     .hero.hero_container {
         padding: 7rem 0 0rem;
@@ -237,26 +288,5 @@
 
     .form_buttons a {
         width: auto;
-    }
-}
-.bee {
-    position: absolute;
-    left: -40px;  /* Move closer to the Register button */
-    top: 130px; /* Adjust vertical position */
-    width: 80px;  /* Maintain appropriate size */
-    height: auto;
-    animation: bee_float 3s ease-in-out infinite;
-    z-index: 20; /* Ensure it stays above other elements */
-}
-
-@keyframes bee_float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
     }
 }

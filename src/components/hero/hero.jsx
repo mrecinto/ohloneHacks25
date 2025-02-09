@@ -11,9 +11,6 @@ function Hero() {
     return (
         <div className="hero hero_container">
             <div className="hero form_container">
-                {/* Floating Bee */}
-                <img className="bee" src={bee} alt="Bee" />
-
                 <div className="hero form_items">
                     <div className="form_item form_title">
                         <h1>
@@ -25,21 +22,25 @@ function Hero() {
                         February 22-23, 2025 • Fremont, CA
                     </h2>
 
-                    <div className="form_item form_buttons">
-                        <a
-                            className="form_button form_register"
-                            target="_blank"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSch8puXVeCb6MkMehUr1x7nvqOlClQV8n5NVczVIOoAbPnrog/viewform"
-                        >
-                            <p>Register</p>
-                        </a>
-                        <a
-                            className="form_button form_mentor"
-                            target="_blank"
-                            href="https://forms.gle/rafHfMazTju8oM7z8"
-                        >
-                            <p>Mentor</p>
-                        </a>
+                    {/* Flex container for bee + buttons */}
+                    <div className="form_buttons_wrapper">
+                        <img className="bee" src={bee} alt="Bee" />
+                        <div className="form_buttons">
+                            <a
+                                className="form_button form_register"
+                                target="_blank"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSch8puXVeCb6MkMehUr1x7nvqOlClQV8n5NVczVIOoAbPnrog/viewform"
+                            >
+                                <p>Register</p>
+                            </a>
+                            <a
+                                className="form_button form_mentor"
+                                target="_blank"
+                                href="https://forms.gle/rafHfMazTju8oM7z8"
+                            >
+                                <p>Mentor</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
