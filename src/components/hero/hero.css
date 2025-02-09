@@ -9,8 +9,8 @@
 .form_item.form_title {
     font-size: 2rem;
     font-weight: bold;
+
     text-align: center; 
-    margin-bottom: 1rem;
 }
 
 .ohlone {
@@ -173,6 +173,24 @@
         top: 20% !important;
     }
 }
+@media (min-width: 1024px) and (max-width: 1681px) {
+    .ohloneBuilding_container {
+        height: 110vh;  /* Increase height to prevent clipping */
+        margin-top: -5vh; /* Adjust to move up without clipping */
+        overflow: visible; /* Ensure it doesn't get cut */
+    }
+}
+
+@media (min-width:1681px){
+    .ohloneBuilding_container {
+        height: 109vh;  /* Increase height to prevent clipping */
+        margin-top: -10vh; /* Adjust to move up without clipping */
+        overflow: visible; /* Ensure it doesn't get cut */
+    }
+}
+
+
+
 
 @media (min-width: 1024px) and (max-width: 1681px) {
     .form_item.form_title {
