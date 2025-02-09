@@ -19,7 +19,10 @@ function Hero() {
                         </h1>
                     </div>
                     <h2 className="form_item form_date">
-                        February 22-23, 2025 • Fremont, CA
+                        Ohlone College, Fremont, CA
+                    </h2>
+                    <h2 className="form_item form_date">
+                        February 22-23, 2025 
                     </h2>
 
                     {/* Flex container for bee + buttons */}
