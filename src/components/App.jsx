@@ -34,7 +34,9 @@ function App() {
       <section id="home">
         <Hero/>
       </section>
-     
+      <section id="about">
+        <AboutUs/>
+      </section>
       
       <Gallery/>
 
@@ -42,9 +44,7 @@ function App() {
 
     
 
-      <section id="about">
-        <AboutUs/>
-      </section>
+      
       {/* <section id="gallery">
         <Gallery/>
       </section> */}
@@ -52,7 +52,7 @@ function App() {
       <section id="faq">
 
         <FAQ/>
-      </section> *
+      </section> 
 
       <section id="sponsors">
         <Sponsors/>
