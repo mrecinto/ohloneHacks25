@@ -239,3 +239,24 @@
         width: auto;
     }
 }
+.bee {
+    position: absolute;
+    left: -40px;  /* Move closer to the Register button */
+    top: 130px; /* Adjust vertical position */
+    width: 80px;  /* Maintain appropriate size */
+    height: auto;
+    animation: bee_float 3s ease-in-out infinite;
+    z-index: 20; /* Ensure it stays above other elements */
+}
+
+@keyframes bee_float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

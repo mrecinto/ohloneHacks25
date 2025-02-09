@@ -5,21 +5,26 @@ import '../App.css';
 import cloud1 from './cloudLayer1.png';
 import cloud2 from './cloudLayer2.jpg';
 import ohloneBuilding from './ohloneBuilding.png';
+import bee from './bee.png'; // Import the bee image
 
 function Hero() {
     return (
         <div className="hero hero_container">
             <div className="hero form_container">
+                {/* Floating Bee */}
+                <img className="bee" src={bee} alt="Bee" />
+
                 <div className="hero form_items">
                     <div className="form_item form_title">
-                    <h1>
-                    <span class="ohlone">Ohlone</span>
-                    <span class="hacks">Hacks 5.0</span> 
-                    </h1>
+                        <h1>
+                            <span className="ohlone">Ohlone</span>
+                            <span className="hacks">Hacks 5.0</span> 
+                        </h1>
                     </div>
-                    <h2 className="form_item form_date">February 22-23, 2025 • Fremont, CA    </h2>
-                    <div className="form_item form_timer">
-                    </div>
+                    <h2 className="form_item form_date">
+                        February 22-23, 2025 • Fremont, CA
+                    </h2>
+
                     <div className="form_item form_buttons">
                         <a
                             className="form_button form_register"
@@ -33,7 +38,7 @@ function Hero() {
                             target="_blank"
                             href="https://forms.gle/rafHfMazTju8oM7z8"
                         >
-                            <p>Mentor  </p>
+                            <p>Mentor</p>
                         </a>
                     </div>
                 </div>
