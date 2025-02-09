@@ -101,7 +101,7 @@ const Navbar = () => {
                     <a href="#gallery">Gallery</a>
                     <a href="#faq">FAQ</a>
                     <a href="#sponsors">Sponsors</a>
-                    <a href="#contact">Contact</a>
+                    {/* <a href="#contact">Contact</a> */}
                 </div>
                 {isMenuOpen && (
                     <div className="fullscreen-menu">
@@ -139,11 +139,11 @@ const Navbar = () => {
                                     Sponsors
                                 </a>
                             </li>
-                            <li className="menu-item">
+                            {/* <li className="menu-item">
                                 <a href="#contact" onClick={closeMenu}>
                                     Contact
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 )}

@@ -12,14 +12,18 @@ import './App.css'
 import Navbar from './navbar/navbar'
 import Hero from './hero/hero'
 import FAQ from './FAQ/FAQ'
+// import Gallery from './Gallery/Gallery'
 import Sponsors from './Sponsors/Sponsors'
 
-import Bee from './hero/bee/bee'
+// import Bee from './hero/bee/bee'
 
-// import AboutMe from './about/about'
+import AboutMe from './about/about'
 // import WhatWeAreAbout from './about/whatweareabout'
 import Footer from './footer/footer'
+
 import Gallery from './Gallery/Gallery';
+// import Gallery from './Gallery/Gallery';
+import AboutUs from './about/about';
 // app logic
 function App() {
 
@@ -34,9 +38,21 @@ function App() {
       
       <Gallery/>
 
-      {/* <section id="FAQ">
-        <FAQ/>
+      {/* <section id="FAQ">/
+
+    
+
+      <section id="about">
+        <AboutUs/>
+      </section>
+      {/* <section id="gallery">
+        <Gallery/>
       </section> */}
+
+      <section id="faq">
+
+        <FAQ/>
+      </section> *
 
       <section id="sponsors">
         <Sponsors/>
