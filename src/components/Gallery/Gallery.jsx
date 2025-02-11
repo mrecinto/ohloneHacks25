@@ -96,16 +96,6 @@ export default function Slideshow() {
     startAutoSlide();
   };
 
-  const handleWheel = (e) => {
-    clearInterval(autoSlideIntervalRef.current);
-    if (e.deltaY > 0) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
-    setTimeout(startAutoSlide, 500);
-  };
-
   const handleHoverLeft = () => {
     clearInterval(autoSlideIntervalRef.current);
     prevSlide();
@@ -181,7 +171,6 @@ export default function Slideshow() {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
-            onWheel={handleWheel}
           >
             <div
               className="slideshow"
