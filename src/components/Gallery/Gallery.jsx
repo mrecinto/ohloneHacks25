@@ -50,16 +50,27 @@ export default function Slideshow() {
     setTransition(true);
     setIndex((prev) => prev - 1);
   };
-
   const handleTransitionEnd = () => {
     if (index === totalSlides + 1) {
-      setTransition(false);
-      setIndex(1);
+      requestAnimationFrame(() => {
+        setTransition(false);
+        setIndex(1);
+      });
     } else if (index === 0) {
-      setTransition(false);
-      setIndex(totalSlides);
+      requestAnimationFrame(() => {
+        setTransition(false);
+        setIndex(totalSlides);
+      });
     }
   };
+  
+  const transitionStyle = {
+    display: "flex",
+    transition: transition ? "transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1)" : "none",
+    transform: `translateX(calc(-${index * 950}px - ${index * 10}px))`, // Adds small space between transitions
+  };
+  
+  
 
   const handleMouseDown = (e) => {
     isDragging.current = true;
