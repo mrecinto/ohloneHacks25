@@ -83,8 +83,8 @@ export default function Slideshow() {
     // If dragging left, move to next slide
     if (moveX.current < -50) {
       nextSlide();
-      isDragging.current = false; // Stop further movement until new drag starts
-    } 
+      isDragging.current = false; // Stop further movement
+    }
     // If dragging right, move to previous slide
     else if (moveX.current > 50) {
       prevSlide();
@@ -125,9 +125,19 @@ export default function Slideshow() {
       <div
         className="slideshow-container"
         style={{
+          /* Let it be full-width on small screens, 
+             but cap at 950px on larger screens */
+          width: "100%",
+          maxWidth: "950px",
+
+          /* Optionally enforce a certain aspect ratio */
+          aspectRatio: "16/9",
+          /* Or you could remove aspectRatio and set a fixed height for large screens
+             height: "auto", 
+             or height: "600px" 
+          */
+
           overflow: "hidden",
-          width: "950px",
-          height: "600px",
           position: "relative",
           display: "flex",
           cursor: "grab",
@@ -148,7 +158,8 @@ export default function Slideshow() {
           style={{
             display: "flex",
             transition: transition ? "transform 0.8s ease-in-out" : "none",
-            transform: `translateX(-${index * 950}px)`,
+            /* Percentage-based transform for responsiveness */
+            transform: `translateX(-${index * 100}%)`,
           }}
           onTransitionEnd={handleTransitionEnd}
         >
@@ -156,8 +167,8 @@ export default function Slideshow() {
             <div
               key={i}
               style={{
-                width: "950px",
-                height: "600px",
+                /* Each slide is 100% of the container's width */
+                width: "100%",
                 flexShrink: 0,
                 overflow: "hidden",
               }}
@@ -166,8 +177,8 @@ export default function Slideshow() {
                 src={src}
                 alt={`Slide ${i}`}
                 style={{
-                  width: "950px",
-                  height: "600px",
+                  width: "100%",
+                  height: "100%",
                   objectFit: "cover",
                   borderRadius: "20px",
                 }}
@@ -193,36 +204,8 @@ export default function Slideshow() {
         }
 
         @media (max-width: 768px) {
-          .slideshow-container {
-            width: 100%;
-            height: 400px;
-          }
-
-          .slideshow img {
-            width: 100%;
-            height: auto;
-          }
-
-          .slideshow {
-            transform: translateX(-${index * 100}vw);
-          }
-
-          .slideshow-container {
-            cursor: grab;
-          }
-
-          .slideshow-container:hover {
-            cursor: pointer;
-          }
-
           h2 {
             font-size: 2rem;
-          }
-
-          .slideshow {
-            transition: none;
-            display: flex;
-            justify-content: center;
           }
         }
       `}</style>
