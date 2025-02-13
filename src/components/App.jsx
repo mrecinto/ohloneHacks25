@@ -38,9 +38,9 @@ function App() {
         <AboutUs/>
       </section>
       
-     {/* <section id="gallery">
+     <section id="gallery">
         <Gallery/>
-      </section>  */}
+      </section> 
 
       {/* <section id="FAQ">/
 
