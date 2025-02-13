@@ -1,20 +1,21 @@
 import { useState, useEffect, useRef } from "react";
 
+
 const images = [
-  "/Images/IMG_4023.png",
-  "/Images/IMG_4121.png",
-  "/Images/IMG_4182.png",
-  "/Images/IMG_4202.png",
-  "/Images/IMG_4292.png",
-  "/Images/IMG_4083.png",
-  "/Images/IMG_4301.png",
-  "/Images/IMG_4310.png",
-  "/Images/IMG_4163.png",
-  "/Images/IMG_4193.png",
-  "/Images/IMG_4223.png",
-  "/Images/IMG_4256.png",
-  "/Images/IMG_4158.png",
-  "/Images/IMG_4078.png",
+  "/images/IMG_4023.png",
+  "/images/IMG_4121.png",
+  "/images/IMG_4182.png",
+  "/images/IMG_4202.png",
+  "/images/IMG_4292.png",
+  "/images/IMG_4083.png",
+  "/images/IMG_4301.png",
+  "/images/IMG_4310.png",
+  "/images/IMG_4163.png",
+  "/images/IMG_4193.png",
+  "/images/IMG_4223.png",
+  "/images/IMG_4256.png",
+  "/images/IMG_4158.png",
+  "/images/IMG_4078.png",
 ];
 
 // Duplicate first and last images for seamless looping
@@ -83,7 +84,7 @@ export default function Slideshow() {
     // If dragging left, move to next slide
     if (moveX.current < -50) {
       nextSlide();
-      isDragging.current = false; // Stop further movement
+      isDragging.current = false;
     }
     // If dragging right, move to previous slide
     else if (moveX.current > 50) {
@@ -125,17 +126,14 @@ export default function Slideshow() {
       <div
         className="slideshow-container"
         style={{
-          /* Let it be full-width on small screens, 
-             but cap at 950px on larger screens */
+          // Let it be full-width on small screens, but cap at 950px on larger screens
           width: "100%",
           maxWidth: "950px",
 
-          /* Optionally enforce a certain aspect ratio */
+          // Optionally enforce a certain aspect ratio
           aspectRatio: "16/9",
-          /* Or you could remove aspectRatio and set a fixed height for large screens
-             height: "auto", 
-             or height: "600px" 
-          */
+          // Or you could remove aspectRatio and set a fixed height for large screens:
+          // height: "600px",
 
           overflow: "hidden",
           position: "relative",
@@ -149,7 +147,7 @@ export default function Slideshow() {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-        onTouchStart={(e) => handleMouseDown(e.touches[0])} // Mobile support
+        onTouchStart={(e) => handleMouseDown(e.touches[0])}
         onTouchMove={(e) => handleMouseMove(e.touches[0])}
         onTouchEnd={handleMouseUp}
       >
@@ -158,7 +156,6 @@ export default function Slideshow() {
           style={{
             display: "flex",
             transition: transition ? "transform 0.8s ease-in-out" : "none",
-            /* Percentage-based transform for responsiveness */
             transform: `translateX(-${index * 100}%)`,
           }}
           onTransitionEnd={handleTransitionEnd}
@@ -167,15 +164,16 @@ export default function Slideshow() {
             <div
               key={i}
               style={{
-                /* Each slide is 100% of the container's width */
                 width: "100%",
                 flexShrink: 0,
                 overflow: "hidden",
               }}
             >
+              {/* lazy-loading attribute added */}
               <img
                 src={src}
                 alt={`Slide ${i}`}
+                loading="lazy"
                 style={{
                   width: "100%",
                   height: "100%",
