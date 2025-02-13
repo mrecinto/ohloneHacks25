@@ -118,7 +118,7 @@ export default function Slideshow() {
           textAlign: "center",
         }}
       >
-        Gallery
+        OhloneHacks 2024
       </h2>
 
       {/* Slideshow Container */}
