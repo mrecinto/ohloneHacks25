@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-
 const images = [
   "/images/IMG_4023.png",
   "/images/IMG_4121.png",
@@ -33,7 +32,11 @@ export default function Slideshow() {
   // ---- AUTO SLIDE ----
   useEffect(() => {
     startAutoSlide();
-    return () => clearInterval(autoSlideIntervalRef.current);
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      clearInterval(autoSlideIntervalRef.current);
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   const startAutoSlide = () => {
@@ -67,6 +70,7 @@ export default function Slideshow() {
         setIndex(totalSlides);
       });
     }
+    setTransition(true);
   };
 
   // ---- DRAG HANDLERS ----
@@ -81,13 +85,10 @@ export default function Slideshow() {
     if (!isDragging.current) return;
     moveX.current = e.clientX - startX.current;
 
-    // If dragging left, move to next slide
     if (moveX.current < -50) {
       nextSlide();
       isDragging.current = false;
-    }
-    // If dragging right, move to previous slide
-    else if (moveX.current > 50) {
+    } else if (moveX.current > 50) {
       prevSlide();
       isDragging.current = false;
     }
@@ -95,7 +96,17 @@ export default function Slideshow() {
 
   const handleMouseUp = () => {
     isDragging.current = false;
+    if (index < 1) setIndex(1);
+    if (index > totalSlides) setIndex(totalSlides);
     startAutoSlide(); // Resume auto-slide
+  };
+
+  // Prevents the slideshow from turning black when clicking outside
+  const handleClickOutside = (e) => {
+    if (!e.target.closest(".slideshow-container")) {
+      setIndex(1); // Reset index to prevent black screen
+      startAutoSlide();
+    }
   };
 
   return (
@@ -126,15 +137,9 @@ export default function Slideshow() {
       <div
         className="slideshow-container"
         style={{
-          // Let it be full-width on small screens, but cap at 950px on larger screens
           width: "100%",
           maxWidth: "950px",
-
-          // Optionally enforce a certain aspect ratio
           aspectRatio: "16/9",
-          // Or you could remove aspectRatio and set a fixed height for large screens:
-          // height: "600px",
-
           overflow: "hidden",
           position: "relative",
           display: "flex",
@@ -186,7 +191,7 @@ export default function Slideshow() {
         </div>
       </div>
 
-      {/* Global Styles - Fix FAQ Section */}
+      {/* Global Styles */}
       <style jsx>{`
         #faq {
           margin-top: 0 !important;
