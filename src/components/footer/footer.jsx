@@ -1,64 +1,92 @@
-import './footer.css';
-import asocLogo from '../../assets/Student-Legasdf.png';
-import OHLogo from '../../assets/logo-one.png'
-function Footer() {
-return(
-    <footer className="footer_container">
-        <div className="footer_item footer_asocLogo">
-            <img
-            alt="Footer logo"
+import React, { useState, useEffect } from 'react';
+
+// Footer Component
+const Footer = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll behavior to change the opacity of the footer
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <footer className={`footer-container ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="footer-logo-container">
+        <div className="footer-logo-left">
+          <img
+            alt="OhloneHacks logo"
             loading="lazy"
             width="92.5"
             height="92.7"
-            decoding="async"
-            data-nimg="1"
-            className="Footer_Student-Legasdf"
-            style={{ color: 'transparent' }}
-            src={asocLogo}
-            />
+            className="footer-logo"
+            src="src/assets/logo-one.png"
+          />
         </div>
-        
-        
-        
-        
+        <div className="footer-logo-right">
+          <img
+            alt="ASOC logo"
+            loading="lazy"
+            width="92.5"
+            height="92.7"
+            className="footer-logo"
+            src="src/assets/Student-Legasdf.png"
+          />
+        </div>
+      </div>
 
-        <div className="footer_item footer_ohloneHacksTitle">
-            <div className="footer_OHLogo">
-                <img
-                alt="Footer logo"
-                loading="lazy"
-                width="92.5"
-                height="92.7"
-                decoding="async"
-                data-nimg="1"
-                className="Footer logo"
-                style={{ color: 'transparent' }}
-                src={OHLogo}
-                />
-            OhloneHacks 
-            
-        </div>
-        </div>
-        
-        <div className="footer_item footer_socials">
-            <div className="footer_socialsIcons">
-                socials go here
-            </div>
-            <div className="footer_copyright">
-                copyright go here
-            </div>
-        </div>
-        
-        
+      {/* Social Media Links and logos */}
+      <div className="footer-socials">
+        <a href="https://www.instagram.com/ohlonehacks25/" target="_blank" rel="noopener noreferrer">
+          <img
+            className="footer-social-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/asoc-research-and-development-695191209/" target="_blank" rel="noopener noreferrer">
+          <img
+            className="footer-social-icon"
+            src="public/Images/LinkedIn_logo_initials.png"
+            alt="LinkedIn"
+          />
+        </a>
+        <a href="mailto:Ohlonehacks24@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img
+            className="footer-social-icon"
+            src="public/Images/Gmail_icon_(2020).png"
+            alt="Gmail"
+          />
+        </a>
+      </div>
+
+      {/* Copyright */}
+      <div className="footer-copyright">
+        &copy; 2025 OhloneHacks
+      </div>
+
+      {/* Watermark */}
+      <div className="footer-watermark">
+        <small>Art by Lilly</small>
+      </div>
     </footer>
-);
-}
+  );
+};
 
-<<<<<<< Updated upstream
-export default Footer;
-=======
 export default Footer;
 
+// Styling for the footer component (Inline CSS)
 const footerStyle = `
   .footer-container {
     display: flex;
@@ -132,4 +160,3 @@ const styleSheet = document.createElement('style');
 styleSheet.type = 'text/css';
 styleSheet.innerText = footerStyle;
 document.head.appendChild(styleSheet);
->>>>>>> Stashed changes
