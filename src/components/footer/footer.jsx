@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Social Media Links */}
+      {/* Social Media Links and logos */}
       <div className="footer-socials">
         <a href="https://www.instagram.com/ohlonehacks25/" target="_blank" rel="noopener noreferrer">
           <img
