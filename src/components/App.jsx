@@ -60,15 +60,9 @@ function App() {
         <Sponsors/>
       </section>
 
-
-
-
-
-
-
-
-      {/* <FAQ/> */}
+       test 
       <Footer/> 
+      
       
       
       
