@@ -60,7 +60,6 @@ function App() {
         <Sponsors/>
       </section>
 
-       test 
       <Footer/> 
       
       

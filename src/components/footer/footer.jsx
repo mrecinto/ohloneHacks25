@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import OHLogo from "../../assets/logo-one.png";
+import ASOCLogo from '../../assets/Student-Legasdf.png';
 
 const Footer = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +22,7 @@ const Footer = () => {
           <img
             alt="OhloneHacks logo"
             className="footer-logo"
-            src="src/assets/logo-one.png"
+            src={OHLogo}
           />
         </div>
 
@@ -54,7 +56,7 @@ const Footer = () => {
           <img
             alt="ASOC logo"
             className="footer-logo"
-            src="src/assets/Student-Legasdf.png"
+            src={ASOCLogo}
           />
         </div>
       </div>
