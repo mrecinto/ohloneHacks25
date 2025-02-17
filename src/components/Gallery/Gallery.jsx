@@ -1,20 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 
 const images = [
-  "/images/IMG_4023.png",
-  "/images/IMG_4121.png",
-  "/images/IMG_4182.png",
-  "/images/IMG_4202.png",
-  "/images/IMG_4292.png",
-  "/images/IMG_4083.png",
-  "/images/IMG_4301.png",
-  "/images/IMG_4310.png",
-  "/images/IMG_4163.png",
-  "/images/IMG_4193.png",
-  "/images/IMG_4223.png",
-  "/images/IMG_4256.png",
-  "/images/IMG_4158.png",
-  "/images/IMG_4078.png",
+  "/Images/IMG_4023.png",
+  "/Images/IMG_4121.png",
+  "/Images/IMG_4182.png",
+  "/Images/IMG_4202.png",
+  "/Images/IMG_4292.png",
+  "/Images/IMG_4083.png",
+  "/Images/IMG_4301.png",
+  "/Images/IMG_4310.png",
+  "/Images/IMG_4163.png",
+  "/Images/IMG_4193.png",
+  "/Images/IMG_4223.png",
+  "/Images/IMG_4256.png",
+  "/Images/IMG_4158.png",
+  "/Images/IMG_4078.png",
 ];
 
 // Duplicate first and last images for seamless looping
