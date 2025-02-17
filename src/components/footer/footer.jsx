@@ -36,14 +36,14 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/asoc-research-and-development-695191209/" target="_blank" rel="noopener noreferrer">
             <img
               className="footer-social-icon"
-              src="public/Images/LinkedIn_logo_initials.png"
+              src="/Images/LinkedIn_logo_initials.png"
               alt="LinkedIn"
             />
           </a>
           <a href="mailto:Ohlonehacks24@gmail.com" target="_blank" rel="noopener noreferrer">
             <img
               className="footer-social-icon"
-              src="public/Images/Gmail_icon_(2020).png"
+              src="/Images/Gmail_icon_(2020).png"
               alt="Gmail"
             />
           </a>
