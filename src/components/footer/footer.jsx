@@ -66,7 +66,10 @@ const Footer = () => {
       </div>
       <div className="footer-watermark">
         <small>Art by Lilly</small>
+        <br />
+        <small>Made with 💖 by ASOC R&D</small>
       </div>
+    
     </footer>
   );
 };
