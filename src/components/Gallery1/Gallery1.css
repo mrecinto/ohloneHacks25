@@ -1,0 +1,52 @@
+gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .main-image {
+    width: 250px;  /* Reduced width */
+    height: 300px; /* Adjusted height to maintain proportion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    gap: 8px;  /* Reduced gap */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  
+  .thumbnail-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .thumbnail {
+    width: 80px;  /* Smaller thumbnail width */
+    height: 50px; /* Smaller thumbnail height */
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+  }
+  
+  .thumbnail.active,
+  .thumbnail:hover {
+    border-color: #007bff;
+  }
+  
