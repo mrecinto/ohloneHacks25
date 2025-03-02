@@ -37,9 +37,12 @@ function App() {
       <section id="about">
         <AboutUs/>
       </section>
+     
       <section id="gallery">
         <Gallery1/>
       </section>  
+
+
       <section id="gallery">
         <Gallery/>
       </section> 
