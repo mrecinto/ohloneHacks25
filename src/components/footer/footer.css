@@ -15,3 +15,7 @@ footer {
 .footer_ohloneHacksTitle{
   display: flex;
 }
+
+.footer-watermark-2{
+  align-content: center;
+}

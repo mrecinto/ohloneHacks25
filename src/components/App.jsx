@@ -41,8 +41,10 @@ function App() {
         <Gallery1/>
       </section>  
       
+     <section id="gallery">
       <section id="gallery">
         <Gallery/>
+      </section> 
       </section>  
 
       {/* <section id="FAQ">/
@@ -63,15 +65,8 @@ function App() {
         <Sponsors/>
       </section>
 
-
-
-
-
-
-
-
-      {/* <FAQ/> */}
       <Footer/> 
+      
       
       
       
