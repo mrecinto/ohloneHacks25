@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const images = [
   "public/2025Images/101_0446.JPG",
-  "public/2025Images/_MGL0408_1.jpg",
+  "public/2025 Images/_MGL0408_1.jpg",
   "public/2025Images/_MGL0403_1.jpg",
   "public/2025Images/_MGL0405_1.jpg",
   "public/2025Images/_MGL0459_1.jpg",
@@ -23,7 +23,6 @@ const images = [
   "public/2025Images/PHOTO-2025-02-24-21-09-14.jpg",
   "public/2025Images/3AQ72801.jpg",
   "public/2025Images/PHOTO-2025-02-24-21-08-17.jpg",
-  "",
 ];
 
 // Duplicate first and last images for seamless looping
