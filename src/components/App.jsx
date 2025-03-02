@@ -20,7 +20,7 @@ import Sponsors from './Sponsors/Sponsors'
 import AboutMe from './about/about'
 // import WhatWeAreAbout from './about/whatweareabout'
 import Footer from './footer/footer'
-//import Gallery1 from './Gallery1/Gallery1'
+import Gallery1 from './Gallery1/Gallery1'
 import Gallery from './Gallery/Gallery';
 // import Gallery from './Gallery/Gallery';
 import AboutUs from './about/about';
@@ -38,9 +38,9 @@ function App() {
         <AboutUs/>
       </section>
      
-      {/*<section id="gallery">
+      <section id="gallery">
         <Gallery1/>
-      </section>  */}
+      </section>  
 
 
       <section id="gallery">
