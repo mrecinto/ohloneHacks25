@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const images = [
   "public/2025Images/101_0446.JPG",
-  "public/2025Images/_MGL0408_1.jpg",
+  "public/2025 Images/_MGL0408_1.jpg",
   "public/2025Images/_MGL0403_1.jpg",
   "public/2025Images/_MGL0405_1.jpg",
   "public/2025Images/_MGL0459_1.jpg",
