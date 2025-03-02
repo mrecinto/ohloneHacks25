@@ -23,6 +23,7 @@ const images = [
   "public/2025Images/PHOTO-2025-02-24-21-09-14.jpg",
   "public/2025Images/3AQ72801.jpg",
   "public/2025Images/PHOTO-2025-02-24-21-08-17.jpg",
+  "",
 ];
 
 // Duplicate first and last images for seamless looping
