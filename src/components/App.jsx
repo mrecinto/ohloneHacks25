@@ -41,12 +41,10 @@ function App() {
       <section id="gallery">
         <Gallery1/>
       </section>  
-      
-     <section id="gallery">
       <section id="gallery">
         <Gallery/>
       </section> 
-      </section>  
+     
 
       {/* <section id="FAQ">/
 
